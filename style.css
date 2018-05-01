@@ -1,0 +1,319 @@
+html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ebebeb;
+    
+    background-image: url(grey-cracked-paint-surface-seamless-tileable-texture-29898693.png);
+    
+    
+    
+}
+
+.dot{
+    margin-bottom: 20px;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(86, 92, 69);
+    box-shadow: inset 0 0 15px 2px #000000;
+    border-radius: 50%;
+    display: inline-block;
+    border: outset 2px black;
+}
+
+.dot:hover{
+    margin-bottom: 20px;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(230, 89, 69);
+    box-shadow: inset 0 0 15px 2px #000000;
+    border-radius: 50%;
+    display: inline-block;
+    border: solid 2px black;
+}
+
+.dotActive{
+    margin-bottom: 20px;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(90, 195, 43);
+    box-shadow: inset 0 0 15px 2px #000000;
+    border-radius: 50%;
+    display: inline-block;
+    border: solid 2px black;
+}
+
+
+
+
+nav{
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
+    float: left;
+    width: 100px;
+    height: 100vh; 
+
+    background-color: rgb(230, 89, 69);
+    
+    outline: 20px double rgb(62, 110, 177);
+    
+}
+
+nav ul{
+    margin: 0;
+    padding: 8px;
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.code{
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+nav ul li{
+    font-family: 'Merriweather Sans', sans-serif;
+    margin: 0;
+    padding: 4px;
+    list-style-type: none;
+    
+    font-size: 20px;
+    font-weight: 800;
+    
+    text-decoration: none;
+
+    color: rgb(212, 0, 0);
+}
+
+.content{
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-left: 120px;
+    
+    
+    
+    
+}
+
+.gallery{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+p{
+    padding: 20px;
+    margin: 0px;
+    letter-spacing: 5px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.code{
+    font-family: monospace;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+#red{
+    color: rgb(230, 89, 69);
+}
+
+figure{
+    width: 300px;
+    height: 450px;
+    box-shadow: 2px 2px 8px black;
+    position: relative;
+    
+    
+    background-color: deeppink;
+    
+}
+
+figCaption{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: black;
+    padding: 4px;
+    color: rgb(230, 89, 69);
+    font-weight: 800;
+    font-family: 'Merriweather Sans', sans-serif;
+    letter-spacing: 2px;
+    font-size: 40px;
+    text-align: right;
+    background-color: whitesmoke;
+    
+}
+
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border:  1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-left: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    box-shadow: 2px 2px 8px black;
+    background-color: whitesmoke
+}
+
+input[type=submit]{
+    background-color: rgb(113, 113, 113);
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: whitesmoke;
+    border:  1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100px;
+    height: 40px;
+    float: right;
+    
+    
+}
+
+input[type=submit]:hover{
+    background-color: rgb(230, 89, 69);
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: whitesmoke;
+    
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100px;
+    height: 40px;
+    float: right;
+    box-shadow: 2px 2px 8px black;
+    
+}
+
+#blue{
+    color: rgb(62, 110, 177);
+    
+    float: right;
+    padding-right: 0px;
+    
+    
+}
+
+
+/*wip*/
+@media screen and (max-width:1080px){ 
+    html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    
+}
+    
+.gallery{
+    
+    float: left;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    
+    
+    
+    
+    
+}
+    
+   
+    nav{
+
+    margin: 0;
+    padding: 0;
+    
+    
+    width: 100vw;
+    height: 50px; 
+    background-color: rgb(230, 89, 69);
+    outline: none;
+    
+    
+        
+    }
+
+nav ul{
+    padding-left: 1vw; 
+    margin: 0;
+    padding: 0;
+    margin-top: 15px;
+    
+/*    list-style: none;*/
+
+}
+
+nav ul li{
+    font-family: 'Merriweather Sans', sans-serif; 
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 800;
+    height: 15px;
+    width: 23%;
+    text-align: center;
+    color: rgb(212, 0, 0);
+}
+
+    .dot{
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
+    .dot:hover{
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
+    .dotActive{
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+    }
+.content{
+    float: left;
+    padding-top: 40px;
+    width: 98%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    
+}
+p{
+    
+    float: left;
+        font-size: 40px;
+        letter-spacing: 2px;
+        text-shadow: 1px 1px 1px black;
+}
+    
+
+}
+
+
