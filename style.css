@@ -13,11 +13,29 @@ body{
     width: 100%;
     background-color: #ebebeb;
     
-    background-image: url(grey-cracked-paint-surface-seamless-tileable-texture-29898693.png);
+    background-image: url(pictures/grey-cracked-paint-surface-seamless-tileable-texture-29898693.png);
     
     
     
 }
+
+@keyframes buttonHover {
+    0% {background-color: rgb(86, 92, 69);}
+    100% {background-color: rgb(230, 89, 69);}
+}
+
+@keyframes buttonSelect {
+    0% {background-color: rgb(230, 89, 69);}
+    10% {background-color: rgb(86, 92, 69);}
+    100% {background-color: rgb(90, 195, 43);}
+}
+
+@keyframes changeScreen {
+    0% {opacity: 0.0;}
+    
+    100% {opacity: 1.0;}
+}
+
 
 .dot{
     margin-bottom: 20px;
@@ -39,6 +57,10 @@ body{
     border-radius: 50%;
     display: inline-block;
     border: solid 2px black;
+    
+    
+    animation-name: buttonHover;
+    animation-duration: .5s;
 }
 
 .dotActive{
@@ -50,14 +72,18 @@ body{
     border-radius: 50%;
     display: inline-block;
     border: solid 2px black;
+    
+    
+    animation-name: buttonSelect;
+    animation-duration: .5s;
 }
 
 
 
 
 nav{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     margin-right: 20px;
     float: left;
     width: 100px;
@@ -82,13 +108,15 @@ nav ul{
 }
 
 a{
+    
     text-decoration: none;
+    
 }
 
 nav ul li{
     font-family: 'Merriweather Sans', sans-serif;
-    margin: 0;
-    padding: 4px;
+    margin: 0px;
+    padding: 0px;
     list-style-type: none;
     
     font-size: 20px;
@@ -104,6 +132,8 @@ nav ul li{
     padding-top: 20px;
     padding-left: 120px;
     
+    animation-name: changeScreen;
+    animation-duration: .5s;
     
     
     
@@ -113,6 +143,10 @@ nav ul li{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    
+    
+    animation-name: changeScreen;
+    animation-duration: .5s;
 }
 
 p{
@@ -135,6 +169,14 @@ p{
     color: rgb(230, 89, 69);
 }
 
+.fillImg{
+    display: block;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
 figure{
     width: 300px;
     height: 450px;
@@ -145,6 +187,16 @@ figure{
     background-color: deeppink;
     
 }
+
+/*
+#gallery1{
+    background-image: url(galleryPhotos/thumbnail1.png);
+}
+
+#gallery2{
+    background-image: url(galleryPhotos/thumbnail2.png);
+}
+*/
 
 figCaption{
     position: absolute;
@@ -161,6 +213,12 @@ figCaption{
     background-color: whitesmoke;
     
 }
+
+@keyframes submit {
+    from {background-color: rgb(113, 113, 113);}
+    to {background-color: rgb(230, 89, 69);}
+}
+
 
 input[type=text], select, textarea{
     width: 100%;
@@ -205,6 +263,9 @@ input[type=submit]:hover{
     height: 40px;
     float: right;
     box-shadow: 2px 2px 8px black;
+    
+    animation-name: submit;
+    animation-duration: .5s;
     
 }
 
@@ -267,7 +328,9 @@ nav ul{
 
 }
 
+    
 nav ul li{
+    color: white;
     font-family: 'Merriweather Sans', sans-serif; 
     float: left;
     margin: 0px;
@@ -278,7 +341,7 @@ nav ul li{
     height: 15px;
     width: 23%;
     text-align: center;
-    color: rgb(212, 0, 0);
+    
 }
 
     .dot{
