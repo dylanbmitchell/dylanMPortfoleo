@@ -3,7 +3,7 @@ html{
     padding: 0;
     height: 100%;
     width: 100%;
-    
+    font-family: sans-serif;
 }
 
 body{
@@ -17,6 +17,15 @@ body{
     
     
     
+}
+#header{
+    display: inline-block;
+    border-bottom: solid rgb(62, 110, 177) 4px;
+    width: auto;
+    
+    padding-bottom: 4px;
+    
+    margin-left: 140px;
 }
 
 @keyframes buttonHover {
@@ -82,6 +91,8 @@ body{
 
 
 nav{
+    position: fixed;
+    top: 0;
     margin: 0px;
     padding: 0px;
     margin-right: 20px;
@@ -103,9 +114,7 @@ nav ul{
     text-decoration: none;
 }
 
-.code{
-    
-}
+
 
 a{
     
@@ -114,7 +123,7 @@ a{
 }
 
 nav ul li{
-    font-family: 'Merriweather Sans', sans-serif;
+    
     margin: 0px;
     padding: 0px;
     list-style-type: none;
@@ -124,7 +133,7 @@ nav ul li{
     
     text-decoration: none;
 
-    color: rgb(212, 0, 0);
+    color: rgb(37, 69, 114);
 }
 
 .content{
@@ -140,6 +149,7 @@ nav ul li{
 }
 
 .gallery{
+    padding-left: 120px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -153,16 +163,18 @@ p{
     padding: 20px;
     margin: 0px;
     letter-spacing: 5px;
-    font-family: 'Merriweather Sans', sans-serif;
+    
     font-weight: 800;
     font-size: 40px;
     text-shadow: 1px 1px 1px black;
 }
 
 .code{
+    display: inline-block;
     font-family: monospace;
     font-size: 30px;
     letter-spacing: 2px;
+    
 }
 
 #red{
@@ -171,10 +183,16 @@ p{
 
 .fillImg{
     display: block;
-    margin-top: 10%;
+    margin-top: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 40%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px black;
+}
+
+.logos{
+    visibility: hidden;
 }
 
 figure{
@@ -188,15 +206,32 @@ figure{
     
 }
 
-/*
 #gallery1{
     background-image: url(galleryPhotos/thumbnail1.png);
+    
 }
 
 #gallery2{
     background-image: url(galleryPhotos/thumbnail2.png);
+    background-size: cover;
 }
-*/
+
+#gallery2{
+    background-image: url(galleryPhotos/thumbnail2.png);
+    background-size: cover;
+}
+
+#gallery3{
+    background-image: url(galleryPhotos/thumbnail3.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#gallery4{
+   background-image: url(galleryPhotos/thumbnail4.png);
+    background-size: cover;
+    background-position: center; 
+}
 
 figCaption{
     position: absolute;
@@ -206,7 +241,7 @@ figCaption{
     padding: 4px;
     color: rgb(230, 89, 69);
     font-weight: 800;
-    font-family: 'Merriweather Sans', sans-serif;
+    
     letter-spacing: 2px;
     font-size: 40px;
     text-align: right;
@@ -221,22 +256,27 @@ figCaption{
 
 
 input[type=text], select, textarea{
-    width: 100%;
+    display: block;
+    width: 70%;
+    
     padding: 12px;
     border:  1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    margin-top: 6px;
-    margin-left: 6px;
-    margin-bottom: 16px;
+    
+    margin-left: auto;
+    margin-right: auto;
+
+    
     resize: vertical;
     box-shadow: 2px 2px 8px black;
     background-color: whitesmoke
 }
 
 input[type=submit]{
+    display: block;
     background-color: rgb(113, 113, 113);
-    font-family: 'Merriweather Sans', sans-serif;
+    
     font-size: 20px;
     font-weight: 800;
     color: whitesmoke;
@@ -245,14 +285,16 @@ input[type=submit]{
     box-sizing: border-box;
     width: 100px;
     height: 40px;
-    float: right;
+    
+    margin-right: auto;
+    margin-left: auto;
     
     
 }
 
 input[type=submit]:hover{
     background-color: rgb(230, 89, 69);
-    font-family: 'Merriweather Sans', sans-serif;
+    
     font-size: 20px;
     font-weight: 800;
     color: whitesmoke;
@@ -266,17 +308,25 @@ input[type=submit]:hover{
     
     animation-name: submit;
     animation-duration: .5s;
+    float: right;
+    margin-right: 20%;
     
 }
 
+#atts{
+    display: inline-block;
+    
+    float: left;
+}
+
 #blue{
+    display: inline-block;
     color: rgb(62, 110, 177);
     
-    float: right;
-    padding-right: 0px;
-    
-    
+    float: left;
 }
+
+
 
 
 /*wip*/
@@ -290,7 +340,8 @@ input[type=submit]:hover{
 }
     
 .gallery{
-    
+/*    z-index: -1;*/
+    padding-left: 0;
     float: left;
     display: flex;
     flex-flow: row wrap;
@@ -305,12 +356,11 @@ input[type=submit]:hover{
    
     nav{
 
-    margin: 0;
-    padding: 0;
-    
+    z-index: 5;
+
     
     width: 100vw;
-    height: 50px; 
+    height: 170px; 
     background-color: rgb(230, 89, 69);
     outline: none;
     
@@ -319,53 +369,65 @@ input[type=submit]:hover{
     }
 
 nav ul{
-    padding-left: 1vw; 
     margin: 0;
     padding: 0;
-    margin-top: 15px;
+    display: flex;
     
-/*    list-style: none;*/
+    flex-direction: column;
+    width: 100vw;
+    height: 170px; 
 
 }
 
     
 nav ul li{
-    color: white;
-    font-family: 'Merriweather Sans', sans-serif; 
-    float: left;
     margin: 0px;
     padding: 0px;
-    list-style-type: none;
-    font-size: 20px;
-    font-weight: 800;
-    height: 15px;
-    width: 23%;
-    text-align: center;
+    color: white;
     
+    
+    
+     
+    
+    list-style-type: none;
+    font-size: 40px;
+    font-weight: 800;
+    height: 40px;
+    width: 100vw;
+    
+    
+    
+    
+}
+    
+#header{
+    display: inline-block;
+    border-bottom: solid rgb(62, 110, 177) 4px;
+    width: auto;
+    
+    padding-bottom: 4px;
+    
+    margin-left: 20px;
+    margin-top: 180px;
 }
 
     .dot{
-        visibility: hidden;
-        width: 0px;
-        height: 0px;
+        display: none;
     }
     .dot:hover{
-        visibility: hidden;
-        width: 0px;
-        height: 0px;
+        display: none;
     }
     .dotActive{
-        visibility: hidden;
-        width: 0px;
-        height: 0px;
+        display: none;
     }
 .content{
     float: left;
-    padding-top: 40px;
+    
     width: 98%;
-    height: 100%;
+    
     margin: 0px;
     padding: 0px;
+    
     
 }
 p{
